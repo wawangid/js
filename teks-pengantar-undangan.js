@@ -1,0 +1,5 @@
+window.guestInvitationData = {
+        key:'guestBookStorage-unikKey', //ini harus unik bisa menggunakan user ID, slug atau lainya,
+        template: "_Assalamualaikum Wr. Wb._\n\nYang Terhormat:\n*[nama]*\n\nDengan memohon Rahmat dan Ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk berkenan menghadiri acara pernikahan kami pada:\n\n*⏰: Akad Nikah:*\n_Minggu, 01 Oktober 2023 jam 09.00 WIB s/d selesai_\n\n*⏰: Ngunduh Mantu:*\n_Kamis, 12 Oktober 2023 jam 09.00 WIB s/d selesai_\n\nUntuk melihat undangan kami secara lengkap, silakan klik link dibawah\n\n*🔗: Link Undangan:*\n*[link-undangan]*\n\n_*‼️ ᵂᵃʲⁱᵇ ᵇᵘᵏᵃ ᵈᵉⁿᵍᵃⁿ ᴳᵒᵒᵍˡᵉ ᶜʰʳᵒᵐᵉ*_\n\nKehadiran serta doa restu dari Bapak/Ibu/Saudara/i akan menjadi anugerah yang berarti bagi kami. Kami mohon maaf yang sebesar-besarnya bahwa undangan ini disampaikan melalui pesan digital ini.\n\nTerima kasih sebesar-besarnya atas perhatian dan doa restunya.\n\n_Wassalamualaikum Wr. Wb._\n\nDengan segala hormat\n\n*Deny & Putri*",
+        invitationLink: "https://deny-putri.wawang.id/",
+    }

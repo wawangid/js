@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='id'>
+<head>
+<meta charset="utf-8">
+<title>Recent Post - WAWANG SETIAWAN</title>
+<meta content='Recent Post - WAWANG SETIAWAN' name='description'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style>
+body{font: normal normal 16px system-ui, -apple-system, Arial, sans-serif;}
+#recentpostnav{border:1px solid #585858;width:100%;margin:0 auto}
+#recentpostsae{margin:0;height:auto;}
+.recentpostel{display:flex;border:1px solid #137FAA;margin:10px 0;padding:10px;height:85px;overflow:hidden;border-radius:10px;position:relative;align-items:center;}
+.recentpostel div a:before{content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:2}
+.recentpostel div a:hover,.recentpostel div a:focus{color:#595959;text-decoration:none;opacity:.7;}
+.recentpostel:hover{border: 1px solid #b1b1b1;}
+.recentpostel img{float:left;height:72px;margin-right:8px;width:72px;border-radius:10px;}
+.recentpostel div,.recentpostel div a{font-weight:700;font-size:14px;font-size:.875rem;text-decoration:none;color:#0e5f7f;}
+</style>
+</head>
+<body>
+<div id="recentpostsae"></div>
+<script>
+//<![CDATA[
+var numfeed = 10;
+var startfeed = 0;
+var urlblog = "https://wawangsetiawan.blogspot.com";
+var charac = 0;
+var urlprevious, urlnext;
+function arlinafeed(e,t){for(var n=e.split("<"),r=0;r<n.length;r++)-1!=n[r].indexOf(">")&&(n[r]=n[r].substring(n[r].indexOf(">")+1,n[r].length));return n=n.join(""),n=n.substring(0,t-1)}function showrecentpostsae(e){var t,n,r,a,i,s="";urlprevious="",urlnext="";for(var l=0;l<e.feed.link.length;l++)"previous"==e.feed.link[l].rel&&(urlprevious=e.feed.link[l].href),"next"==e.feed.link[l].rel&&(urlnext=e.feed.link[l].href);for(var d=0;d<numfeed&&d!=e.feed.entry.length;d++){t=e.feed.entry[d],n=t.title.$t;for(var l=0;l<t.link.length;l++)if("alternate"==t.link[l].rel){r=t.link[l].href;break}i="content"in t?t.content.$t:"summary"in t?t.summary.$t:"",a="media$thumbnail"in t?t.media$thumbnail.url:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA9qIESOoglgXcD2Yg0XaRJdQM_h6ppxX8uxcIB-KedI5VbaPHkVCXDyhMz5LArzvKejIMaP3xOuWfy0KrTskfUycb9Uikyy69f98TMVYxM5YVvIO4KaK_NJYOHLalorgo2VgKnD5vB-4s/s1600/no-image.png",s+="<div class='recentpostel'>",s+="<img loading='lazy' src='"+a+"' srcset='"+a+"' alt='"+n+"' />",s+="<div><a target='_blank' href='"+r+"' title='"+n+"'>"+n+"</a></div>",s+="</div>"}document.getElementById("recentpostsae").innerHTML=s,s="",document.innerHTML=s}function navigasifeed(e){var t,n;-1==e?(t=urlprevious.indexOf("?"),n=urlprevious.substring(t)):1==e?(t=urlnext.indexOf("?"),n=urlnext.substring(t)):n="?start-index=1&max-results="+numfeed+"&orderby=published&alt=json-in-script",n+="&callback=showrecentpostsae",incluirscript(n)}function incluirscript(e){1==startfeed&&removerscript(),document.innerHTML="";var t=urlblog+"/feeds/posts/default"+e,n=document.createElement("script");n.setAttribute("type","text/javascript"),n.setAttribute("src",t),n.setAttribute("id","arlinalabel"),document.getElementsByTagName("head")[0].appendChild(n),startfeed=1}function removerscript(){var e=document.getElementById("arlinalabel"),t=e.parentNode;t.removeChild(e)}onload=function(){navigasifeed(0)};
+//]]>
+</script>
+
+</body>
+</html>
